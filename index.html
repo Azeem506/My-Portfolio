@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hafiz Azeem | Senior Full-Stack .NET Developer & Team Lead</title>
+<meta name="description" content="Senior Full-Stack .NET Developer and Team Lead with 6+ years building ERP systems across desktop, web and mobile. Available for senior and lead roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#eef1f6;--card:#fff;--ink:#0f1b2d;--mute:#52607a;--line:#d6dce8;--blue:#2447f5;--blue-d:#1a35c4;--amber:#ffb020;--navy:#0f1b2d;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+h2{font-size:clamp(2rem,4vw,2.9rem);font-weight:800;margin-bottom:14px}
+.lead{color:var(--mute);max-width:60ch;margin-bottom:44px}
+
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(238,241,246,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.25rem;text-decoration:none}
+.logo b{color:var(--blue)}
+.links{display:flex;gap:6px;list-style:none;align-items:center}
+.links a{text-decoration:none;padding:8px 13px;border-radius:99px;font-size:.93rem;font-weight:500;color:var(--mute);transition:.2s}
+.links a:hover{color:var(--ink)}
+.links a.active{background:var(--navy);color:#fff}
+.links .cta{background:var(--blue);color:#fff}
+.links .cta:hover{background:var(--blue-d);color:#fff}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--ink);margin:6px 10px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.progress{position:absolute;left:0;bottom:0;height:3px;background:var(--blue);width:0}
+
+/* hero */
+#home{min-height:100vh;display:flex;align-items:center;padding:120px 0 72px;position:relative;
+background:radial-gradient(circle at 85% 20%,rgba(36,71,245,.14),transparent 45%),linear-gradient(var(--line) 1px,transparent 1px) 0 0/100% 56px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/56px 100%,var(--paper)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.avail{display:inline-flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:99px;font-size:.88rem;font-weight:500;margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:#1fb85a;box-shadow:0 0 0 0 rgba(31,184,90,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(31,184,90,0)}100%{box-shadow:0 0 0 0 rgba(31,184,90,0)}}
+h1{font-size:clamp(2.7rem,6.4vw,5rem);font-weight:800;margin-bottom:20px}
+h1 .u{background:linear-gradient(transparent 62%,var(--amber) 62%);padding:0 4px}
+.role{font-size:1.2rem;font-weight:500;margin-bottom:12px;min-height:1.8em}
+.role span{color:var(--blue)}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--blue);vertical-align:-.15em;margin-left:2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.sub{color:var(--mute);max-width:52ch;margin-bottom:30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:99px;font-weight:600;text-decoration:none;border:2px solid var(--navy);cursor:pointer;font:600 1rem 'IBM Plex Sans';transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.p{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.p:hover{background:var(--blue-d);border-color:var(--blue-d)}
+.btn.o{background:transparent;color:var(--ink)}
+.btn.o:hover{background:var(--navy);color:#fff}
+
+/* erp panel: the memorable element */
+.panel{background:var(--navy);color:#dfe6f5;border-radius:var(--r);box-shadow:0 30px 60px -20px rgba(15,27,45,.5);overflow:hidden;font-size:.9rem;transform:rotate(1.5deg);transition:transform .4s}
+.panel:hover{transform:rotate(0)}
+.bar{display:flex;gap:7px;padding:12px 16px;background:#16263f;align-items:center}
+.bar i{width:11px;height:11px;border-radius:50%;background:#3a4c6b}
+.bar em{margin-left:auto;font-style:normal;font-size:.78rem;color:#8fa0c0}
+.row{display:grid;grid-template-columns:1fr 88px;gap:14px;align-items:center;padding:13px 18px;border-top:1px solid #1f3150}
+.row b{display:block;color:#fff;font-weight:600}
+.row small{color:#8fa0c0}
+.meter{height:7px;background:#1f3150;border-radius:9px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--amber));border-radius:9px;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.panel.in .meter i{width:var(--w)}
+.sync{padding:13px 18px;border-top:1px solid #1f3150;color:#8fa0c0;font-size:.82rem;display:flex;gap:8px;align-items:center}
+.sync .dot{width:7px;height:7px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-44px;position:relative;z-index:2}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;text-align:center}
+.stat b{font:800 2.5rem 'Bricolage Grotesque';color:var(--blue);display:block;line-height:1}
+.stat span{color:var(--mute);font-size:.9rem}
+
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+.about p{margin-bottom:16px;color:#2b3a55}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;align-self:start}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.facts div:last-child{border:0}
+.facts span{color:var(--mute)}
+.facts b{text-align:right;font-weight:600}
+
+/* timeline */
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl .fill{position:absolute;left:8px;top:6px;width:2px;background:var(--blue);height:0}
+.job{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;margin-bottom:22px;transition:box-shadow .3s,transform .3s}
+.job:hover{box-shadow:0 18px 40px -22px rgba(15,27,45,.35);transform:translateY(-3px)}
+.job::before{content:"";position:absolute;left:-34px;top:30px;width:18px;height:18px;border-radius:50%;background:var(--paper);border:3px solid var(--blue)}
+.job.now::before{background:var(--blue);box-shadow:0 0 0 6px rgba(36,71,245,.18)}
+.job header{position:static;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;background:none;backdrop-filter:none;box-shadow:none;margin-bottom:10px}
+.job h3{font-size:1.35rem}
+.job .when{font-weight:600;color:var(--blue)}
+.job .co{color:var(--mute);font-size:.95rem;margin-bottom:12px}
+.job ul{padding-left:20px;color:#2b3a55}
+.job li{margin-bottom:7px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tags span{font-size:.8rem;font-weight:500;padding:4px 11px;border-radius:99px;background:#e3e9ff;color:var(--blue-d)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:border-color .25s,transform .25s}
+.sk:hover{border-color:var(--blue);transform:translateY(-4px)}
+.sk h3{font-size:1.15rem;margin-bottom:14px}
+.sk .tags{margin:0}
+.sk:nth-child(even) .tags span{background:#fff1d1;color:#8a5a00}
+
+/* platform */
+.plat{background:var(--navy);color:#fff;border-radius:22px;padding:48px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
+.plat p{color:#b9c4dc;margin-bottom:22px}
+.flow{display:grid;gap:10px}
+.flow div{background:#16263f;border:1px solid #243a5c;border-radius:10px;padding:13px 16px;display:flex;justify-content:space-between;font-size:.93rem}
+.flow div span{color:var(--amber);font-weight:600}
+
+/* cv */
+.cvbox{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cvtop{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line)}
+.cvtop .btn{padding:9px 18px;font-size:.92rem}
+.cvframe{width:100%;height:78vh;min-height:520px;border:0;display:block;background:#f6f7fa}
+.cvfb{padding:40px;text-align:center;color:var(--mute)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cc{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;text-decoration:none;transition:.25s}
+.cc:hover{border-color:var(--blue);transform:translateY(-4px);box-shadow:0 18px 36px -24px rgba(36,71,245,.6)}
+.cc .ic{width:50px;height:50px;border-radius:12px;background:#e3e9ff;display:grid;place-items:center;font-size:1.4rem;flex:none}
+.cc small{color:var(--mute);display:block}
+.cc b{font-weight:600;word-break:break-all}
+.hire{margin-top:36px;text-align:center;background:var(--blue);color:#fff;border-radius:22px;padding:52px 24px}
+.hire h3{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:10px}
+.hire p{opacity:.9;margin-bottom:22px}
+.hire .btn{background:#fff;color:var(--blue);border-color:#fff}
+footer{text-align:center;padding:30px;color:var(--mute);font-size:.9rem}
+
+/* top button */
+#top{position:fixed;right:22px;bottom:22px;width:52px;height:52px;border-radius:50%;border:0;background:var(--blue);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 12px 26px -8px rgba(36,71,245,.7);opacity:0;visibility:hidden;transform:translateY(20px);transition:.35s;z-index:60}
+#top.show{opacity:1;visibility:visible;transform:none}
+#top:hover{background:var(--blue-d);transform:translateY(-4px)}
+#top svg{width:22px;height:22px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+.burger{display:block}
+.links{position:fixed;inset:68px 0 auto;flex-direction:column;background:var(--paper);padding:14px 24px 24px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .35s;align-items:stretch;gap:2px}
+.links.open{transform:none}
+.links a{display:block;padding:12px 14px}
+.hero,.about,.plat,.contact{grid-template-columns:1fr}
+.skills{grid-template-columns:1fr}
+.stats{grid-template-columns:1fr 1fr;margin-top:-30px}
+.panel{transform:none}
+.plat{padding:30px}
+section{padding:72px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}.meter i{width:var(--w)}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+<div class="wrap"><nav aria-label="Main">
+<a href="#home" class="logo">hafiz<b>.</b>azeem</a>
+<button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<ul class="links" id="links">
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li>
+<li><a href="#skills">Skills</a></li><li><a href="#platform">Work</a></li><li><a href="#cv">CV</a></li>
+<li><a href="#contact" class="cta">Contact</a></li>
+</ul></nav></div>
+<div class="progress" id="prog"></div>
+</header>
+
+<main>
+<section id="home"><div class="wrap hero">
+<div>
+<div class="avail"><span class="dot"></span>Open to senior &amp; lead roles</div>
+<h1>I build ERP systems that <span class="u">run businesses</span>.</h1>
+<p class="role"><span id="typed"></span><i class="caret"></i></p>
+<p class="sub">Senior Full-Stack Developer and Team Lead with 6+ years across desktop, web and mobile. I design the architecture, lead the team, and ship software companies depend on every day.</p>
+<div class="btns">
+<a class="btn p" href="#contact">Hire me</a>
+<a class="btn o" href="#cv">View my CV</a>
+</div>
+</div>
+<div class="panel" id="panel" aria-label="Overview of platforms I build">
+<div class="bar"><i></i><i></i><i></i><em>AisoneERP / platforms</em></div>
+<div class="row"><div><b>WinForms desktop</b><small>Core ERP modules, DevExpress</small></div><div class="meter"><i style="--w:96%"></i></div></div>
+<div class="row"><div><b>ASP.NET Core / MVC</b><small>Web apps and portals</small></div><div class="meter"><i style="--w:92%"></i></div></div>
+<div class="row"><div><b>REST APIs</b><small>Desktop, web and mobile in sync</small></div><div class="meter"><i style="--w:90%"></i></div></div>
+<div class="row"><div><b>SQL Server</b><small>Schemas, procedures, indexing</small></div><div class="meter"><i style="--w:94%"></i></div></div>
+<div class="row"><div><b>Xamarin mobile</b><small>Android and iOS ERP access</small></div><div class="meter"><i style="--w:78%"></i></div></div>
+<div class="sync"><span class="dot"></span>All systems in sync</div>
+</div>
+</div></section>
+
+<div class="wrap"><div class="stats rv">
+<div class="stat"><b data-n="6" data-s="+">0</b><span>Years of experience</span></div>
+<div class="stat"><b data-n="3">0</b><span>Platforms: desktop, web, mobile</span></div>
+<div class="stat"><b data-n="4">0</b><span>Roles, one growth path</span></div>
+<div class="stat"><b data-n="1">0</b><span>ERP platform, owned end to end</span></div>
+</div></div>
+
+<section id="about"><div class="wrap">
+<h2 class="rv">About me</h2>
+<p class="lead rv">An engineer who grew from mobile developer to team lead by owning problems end to end.</p>
+<div class="about">
+<div class="rv">
+<p>I started in 2020 building Xamarin apps that extended an ERP to Android and iOS. I then moved into WinForms modules and ASP.NET MVC web applications, and since 2023 I lead the team that builds AisoneERP.</p>
+<p>That path means I understand the whole system: the database design underneath, the API in the middle, and the screen a user relies on. I set code-review standards, mentor developers, plan sprints and keep delivery predictable for product and QA.</p>
+<p>I care about code that stays maintainable, queries that stay fast as data grows, and teams that ship without drama.</p>
+</div>
+<div class="facts rv">
+<div><span>Role</span><b>Senior Full-Stack Developer &amp; Team Lead</b></div>
+<div><span>Focus</span><b>.NET, ERP, SQL Server</b></div>
+<div><span>Education</span><b>MS Computer Science, PUCIT</b></div>
+<div><span>Location</span><b>Lahore, Pakistan</b></div>
+<div><span>Languages</span><b>English, Urdu (fluent)</b></div>
+</div>
+</div></div></section>
+
+<section id="experience" style="background:#e6eaf2"><div class="wrap">
+<h2 class="rv">Experience</h2>
+<p class="lead rv">Four steps, each with more responsibility than the last.</p>
+<div class="tl" id="tl"><div class="fill" id="tlfill"></div>
+
+<article class="job now rv">
+<header><h3>Senior Full-Stack Developer &amp; Team Lead</h3><span class="when">2023 – Present</span></header>
+<p class="co">Aisone Systems · WinForms ERP and full-stack web</p>
+<ul>
+<li>Lead a cross-functional team delivering end-to-end features for AisoneERP across WinForms, ASP.NET Core/MVC and REST APIs.</li>
+<li>Own technical architecture and code-review standards to improve performance, maintainability and reliability.</li>
+<li>Mentor junior and mid-level developers, plan sprints and coordinate delivery with product and QA in Agile.</li>
+<li>Design and optimize SQL Server schemas, stored procedures and DevExpress reports and dashboards.</li>
+</ul>
+<div class="tags"><span>Team leadership</span><span>Architecture</span><span>ASP.NET Core</span><span>SQL Server</span><span>Agile/Scrum</span></div>
+</article>
+
+<article class="job rv">
+<header><h3>Mid-Senior Developer</h3><span class="when">2021 – 2023</span></header>
+<p class="co">Aisone Systems · WinForms ERP and ASP.NET MVC</p>
+<ul>
+<li>Built ERP modules in C# with database-driven features and DevExpress UI controls to streamline enterprise workflows.</li>
+<li>Delivered responsive ASP.NET MVC applications (HTML, CSS, Bootstrap, JavaScript) on SQL Server.</li>
+<li>Designed and consumed REST APIs linking the WinForms suite with web components, improving data consistency.</li>
+<li>Optimized stored procedures, views and indexes to keep queries fast on growing production data.</li>
+</ul>
+<div class="tags"><span>C#</span><span>WinForms</span><span>ASP.NET MVC</span><span>DevExpress</span><span>REST APIs</span></div>
+</article>
+
+<article class="job rv">
+<header><h3>Junior Mobile Developer</h3><span class="when">2020 – 2021</span></header>
+<p class="co">Aisone Systems · Xamarin</p>
+<ul>
+<li>Built cross-platform Android and iOS apps with Xamarin and C#, extending core ERP functionality to mobile.</li>
+<li>Applied MVVM and consumed REST APIs to sync app data with SQL Server back ends.</li>
+<li>Supported debugging, testing and deployment as the company launched mobile ERP access.</li>
+</ul>
+<div class="tags"><span>Xamarin</span><span>MVVM</span><span>REST integration</span></div>
+</article>
+
+<article class="job rv">
+<header><h3>ASP.NET MVC Web Developer</h3><span class="when">2020</span></header>
+<p class="co">EaziSols</p>
+<ul>
+<li>Built and maintained scalable web applications with ASP.NET Core, MVC, C#, SQL Server, Entity Framework Core, ADO.NET and REST APIs.</li>
+<li>Worked with senior developers on UI components, backend logic and database-driven features.</li>
+</ul>
+</article>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<h2 class="rv">Skills</h2>
+<p class="lead rv">A full stack for business software, plus the leadership to run it.</p>
+<div class="skills">
+<div class="sk rv"><h3>Backend and .NET</h3><div class="tags"><span>C#</span><span>.NET Core</span><span>.NET Framework</span><span>ASP.NET Core</span><span>ASP.NET MVC</span><span>Entity Framework Core</span><span>ADO.NET</span></div></div>
+<div class="sk rv"><h3>Database</h3><div class="tags"><span>SQL Server 2019/2022</span><span>Schema design</span><span>Stored procedures</span><span>Views</span><span>Indexing</span><span>Query tuning</span></div></div>
+<div class="sk rv"><h3>Desktop and reporting</h3><div class="tags"><span>WinForms</span><span>DevExpress controls</span><span>DevExpress Reporting</span><span>Dashboards</span></div></div>
+<div class="sk rv"><h3>Web front end</h3><div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>AJAX</span></div></div>
+<div class="sk rv"><h3>APIs and mobile</h3><div class="tags"><span>RESTful API design</span><span>System integration</span><span>Xamarin</span><span>MVVM</span></div></div>
+<div class="sk rv"><h3>Leadership</h3><div class="tags"><span>Team leading</span><span>Mentoring</span><span>Code review</span><span>Solution architecture</span><span>Design patterns</span><span>Agile/Scrum</span></div></div>
+</div></div></section>
+
+<section id="platform" style="padding-top:0"><div class="wrap">
+<div class="plat rv">
+<div>
+<h2>AisoneERP</h2>
+<p>I develop and maintain the Aisone Systems ERP, built with ASP.NET Core, HTML, CSS and JavaScript, which showcases the ERP modules and business capabilities to customers.</p>
+<p>One platform, three front ends, one source of truth: that is the design principle I lead with.</p>
+<a class="btn p" href="#contact">Discuss a project</a>
+</div>
+<div class="flow">
+<div>Desktop (WinForms) <span>modules</span></div>
+<div>Web (ASP.NET Core / MVC) <span>portal</span></div>
+<div>Mobile (Xamarin) <span>access</span></div>
+<div>REST API layer <span>sync</span></div>
+<div>SQL Server <span>data</span></div>
+</div>
+</div></div></section>
+
+<section id="cv" style="background:#e6eaf2"><div class="wrap">
+<h2 class="rv">My CV</h2>
+<p class="lead rv">Read it here or download a copy.</p>
+<div class="cvbox rv">
+<div class="cvtop">
+<b>Hafiz_Azeem_CV.pdf</b>
+<div class="btns">
+<a class="btn o" href="CV.pdf" target="_blank" rel="noopener">Open in new tab</a>
+<a class="btn p" href="CV.pdf" download="Hafiz_Azeem_CV.pdf">Download CV</a>
+</div></div>
+<iframe class="cvframe" id="cvframe" title="Hafiz Azeem CV" src="CV.pdf#view=FitH&toolbar=0"></iframe>
+<p class="cvfb" id="cvfb" hidden>Your browser can't show the PDF here. Use "Open in new tab" or "Download CV" above.</p>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2 class="rv">Contact</h2>
+<p class="lead rv">Hiring for a senior or lead .NET role? I reply fast.</p>
+<div class="contact">
+<a class="cc rv" href="mailto:ranaazeem068589@gmail.com"><span class="ic">✉</span><span><small>Email</small><b>ranaazeem068589@gmail.com</b></span></a>
+<a class="cc rv" href="tel:+923430423954" id="tel"><span class="ic">☎</span><span><small>Phone</small><b>0343 0423954</b></span></a>
+<a class="cc rv" href="https://wa.me/923430423954"><span class="ic">💬</span><span><small>WhatsApp</small><b>Message me directly</b></span></a>
+<div class="cc rv"><span class="ic">📍</span><span><small>Location</small><b>Lahore, Punjab, Pakistan</b></span></div>
+</div>
+<div class="hire rv">
+<h3>Need someone who can lead and still ship code?</h3>
+<p>Send me the role. I'll respond with how I'd approach it.</p>
+<a class="btn" href="mailto:ranaazeem068589@gmail.com?subject=Interview%20opportunity%20for%20Hafiz%20Azeem">Schedule an interview</a>
+</div>
+</div></section>
+</main>
+
+<footer>© <span id="yr"></span> Hafiz Azeem. Built with HTML, CSS and JavaScript.</footer>
+
+<button id="top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script>
+(function(){
+var $=function(s,c){return(c||document).querySelector(s)},$$=function(s,c){return[].slice.call((c||document).querySelectorAll(s))};
+var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+$('#yr').textContent=new Date().getFullYear();
+
+/* mobile menu */
+var burger=$('#burger'),links=$('#links');
+function closeMenu(){links.classList.remove('open');burger.classList.remove('open');burger.setAttribute('aria-expanded','false')}
+burger.onclick=function(){var o=links.classList.toggle('open');burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o)};
+$$('a',links).forEach(function(a){a.addEventListener('click',closeMenu)});
+
+/* scroll: header, progress, top button, timeline fill */
+var hdr=$('#hdr'),prog=$('#prog'),topb=$('#top'),tl=$('#tl'),fill=$('#tlfill');
+function onScroll(){
+var y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+hdr.classList.toggle('solid',y>20);
+prog.style.width=(h>0?y/h*100:0)+'%';
+topb.classList.toggle('show',y>500);
+var r=tl.getBoundingClientRect(),p=Math.min(Math.max((innerHeight*.6-r.top)/r.height,0),1);
+fill.style.height=(p*(r.height-12))+'px';
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+topb.onclick=function(){scrollTo({top:0,behavior:reduce?'auto':'smooth'})};
+
+/* active nav link */
+var map={};
+$$('a',links).forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){
+if(e.isIntersecting){$$('a',links).forEach(function(a){a.classList.remove('active')});
+var a=map[e.target.id];if(a&&!a.classList.contains('cta'))a.classList.add('active')}})},{rootMargin:'-45% 0px -50% 0px'});
+$$('section[id]').forEach(function(s){so.observe(s)});
+
+/* reveal, panel meters, counters */
+function count(el){
+var n=+el.dataset.n,s=el.dataset.s||'';
+if(reduce){el.textContent=n+s;return}
+var t0=performance.now();
+(function step(t){var k=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-k,3)))+s;if(k<1)requestAnimationFrame(step)})(t0);
+}
+var ro=new IntersectionObserver(function(es){es.forEach(function(e){
+if(!e.isIntersecting)return;
+e.target.classList.add('in');
+$$('[data-n]',e.target).forEach(count);
+ro.unobserve(e.target)})},{threshold:.15});
+$$('.rv').forEach(function(el,i){el.style.transitionDelay=(i%4)*70+'ms';ro.observe(el)});
+setTimeout(function(){$('#panel').classList.add('in')},500);
+
+/* typing line */
+var words=['.NET Solution Architect','ERP Systems Engineer','Full-Stack Team Lead'],wi=0,ci=0,del=false,out=$('#typed');
+if(reduce){out.textContent=words.join(' · ')}else{(function tick(){
+var w=words[wi];out.textContent=w.slice(0,ci);
+if(!del&&ci===w.length){del=true;return setTimeout(tick,1600)}
+if(del&&ci===0){del=false;wi=(wi+1)%words.length}
+ci+=del?-1:1;setTimeout(tick,del?35:70)})()}
+
+/* CV viewer fallback if PDF fails to load (e.g. file missing) */
+var f=$('#cvframe');
+fetch('CV.pdf',{method:'HEAD'}).then(function(r){if(!r.ok)throw 0}).catch(function(){
+if(location.protocol==='file:')return;
+f.hidden=true;$('#cvfb').hidden=false});
+})();
+</script>
+</body>
+</html>
